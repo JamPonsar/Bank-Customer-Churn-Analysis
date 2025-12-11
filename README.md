@@ -23,10 +23,10 @@ The dataset contains customer information including:
 bank-customer-churn-analysis/
 │
 ├── data/
-│   ├── bank_churn.csv          # Raw dataset
-│   └── bank_churn.db           # SQLite database
+│   ├── bank_churn.csv           # Raw dataset
+│   └── bank_churn.db            # SQLite database
 │
-├── Bank_Churn_Analysis.ipynb   # Main Jupyter notebook
+├── Bank_Churn_Analysis.ipynb    # Main Jupyter notebook
 ├── README.md                    # Project documentation
 ├── requirements.txt             # Python dependencies
 └── .gitignore                   # Git ignore file
