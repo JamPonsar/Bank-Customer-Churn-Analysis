@@ -1,189 +1,104 @@
 # Bank Customer Churn Analysis
 
-## Project Overview
-Analysis of customer churn patterns in banking to identify at-risk customers and provide actionable retention strategies for financial institutions.
+Analysis of customer churn patterns in banking using SQL and Python to identify factors that drive customer retention.
 
-**Why This Project?**
-Customer churn costs banks millions in lost revenue. This analysis identifies key factors driving churn and provides data-driven recommendations to improve retention, directly relevant to financial services clients.
+## Quick Start
 
-## 🔍 View the Analysis
+**Just want to see the analysis?** Click on [`Bank_Churn_Analysis.ipynb`](Bank_Churn_Analysis.ipynb) to view the full notebook with all visualizations and code.
 
-**Option 1: View on GitHub (No Setup Required)**
-Simply click on [`Bank_Churn_Analysis.ipynb`](Bank_Churn_Analysis.ipynb) in this repository to see the full analysis with all code, visualizations, and insights rendered directly on GitHub.
+**Want to run it yourself?** See the [setup instructions](#setup) below.
 
-**Option 2: Run Locally**
-Follow the [How to Run](#how-to-run) section below to execute the notebook on your own machine.
+## About This Project
 
-## Technologies Used
-- **Python**: Pandas, NumPy, Matplotlib, Seaborn
-- **SQL**: SQLite for data storage and querying  
-- **Jupyter Notebook**: Interactive analysis and visualization
+I built this project to demonstrate SQL and Python data analysis skills, focusing on a real business problem in banking. Customer churn is expensive - it costs 5-7x more to acquire new customers than retain existing ones - so understanding what drives customers to leave is valuable.
+
+The analysis uses a dataset of 10,000 bank customers and combines SQL queries with Python analysis to uncover patterns in churn behavior.
+
+## Tech Stack
+
+- **Python** (Pandas, NumPy, Matplotlib, Seaborn)
+- **SQL** (SQLite)
+- **Jupyter Notebook**
 
 ## Dataset
-**Source**: [Bank Customer Churn Dataset on Kaggle](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn)
 
-The dataset contains **10,000 customer records** with:
-- Demographics (age, gender, geography)
-- Account details (balance, tenure, credit score)
-- Product usage (number of products, credit card holder status)
-- Activity status (active member or not)
-- Churn status (whether customer left the bank)
+Using the [Bank Customer Churn dataset from Kaggle](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn), which includes customer demographics, account details, product usage, and whether they churned.
+
+## What I Found
+
+A few interesting patterns emerged:
+
+- **Geography matters**: Germany has 2x the churn rate of France or Spain (32% vs 16%)
+- **Activity is key**: Inactive members churn at nearly double the rate of active ones
+- **Complaints are a red flag**: Customers who complained show dramatically higher churn
+- **Age patterns**: Middle-aged customers (40-60) churn more than younger or older segments
+- **Product paradox**: Having more products doesn't always mean more loyalty - customers with 3-4 products actually showed higher churn
+
+## Analysis Approach
+
+The notebook walks through:
+
+1. SQL queries to extract and aggregate customer data
+2. Data cleaning and validation in Python
+3. Statistical analysis to identify churn patterns
+4. Visualizations showing key findings
+5. Business recommendations based on the data
+
+I focused on making the insights actionable - not just "churn is bad" but specifically where it's happening and what might help.
 
 ## Project Structure
+
 ```
 bank-customer-churn-analysis/
-│
 ├── data/
-│   ├── Customer-Churn-Records.csv    # Raw dataset from Kaggle
-│   └── bank_churn.db                 # SQLite database
-│
-├── Bank_Churn_Analysis.ipynb         # Main analysis notebook
-├── load_data.py                      # Script to load CSV into SQLite
-├── DEMO_SCRIPT.md                    # Presentation guide
-├── README.md                         # Project documentation
-├── requirements.txt                  # Python dependencies
-└── .gitignore                        # Git ignore file
+│   ├── Customer-Churn-Records.csv
+│   └── bank_churn.db
+├── Bank_Churn_Analysis.ipynb
+├── load_data.py
+├── requirements.txt
+└── README.md
 ```
 
-## Key Findings
+## Setup
 
-📊 **Geographic Insights**
-- Germany shows significantly higher churn rate (32.4%) compared to France (16.2%) and Spain (16.7%)
-- Geographic targeting needed for retention campaigns
+If you want to run the notebook locally:
 
-👥 **Customer Activity**
-- Inactive members churn at 26.9% vs 14.3% for active members
-- Engagement programs are critical for retention
-
-⚠️ **Complaint Impact**  
-- Customers with complaints show dramatically higher churn rates
-- Customer service quality directly impacts retention
-
-📈 **Age Demographics**
-- Middle-aged customers (40-60) show higher churn rates
-- Age-specific retention strategies recommended
-
-💳 **Product Usage**
-- Unexpected finding: customers with 3-4 products show higher churn
-- May indicate product overload or poor cross-selling experience
-
-## Analysis Highlights
-
-### SQL Queries
-- Overall churn statistics and baseline metrics
-- Churn rate by geography, credit score, and demographics
-- Active vs inactive member comparison
-- Product usage and complaint analysis
-
-### Python Data Analysis
-- Data cleaning and validation
-- Feature engineering (age groups, balance categories)
-- Statistical analysis of churn patterns
-- Correlation analysis across variables
-
-### Data Visualizations
-- 8 professional charts showing churn patterns
-- Geographic comparison bar charts
-- Distribution histograms
-- Correlation heatmap
-- Trend analysis by demographics
-
-### Business Recommendations
-- Immediate actions for high-risk segments
-- Medium-term engagement strategies
-- Long-term predictive modeling roadmap
-- Quantified financial impact estimates
-
-## How to Run
-
-### Prerequisites
+1. Clone the repo
 ```bash
-pip install -r requirements.txt
-```
-
-### Steps
-
-1. **Clone this repository**
-```bash
-git clone https://github.com/JamPonsar/bank-customer-churn-analysis.git
+git clone https://github.com/YOUR_USERNAME/bank-customer-churn-analysis.git
 cd bank-customer-churn-analysis
 ```
 
-2. **Install dependencies**
+2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Load data into SQLite database**
+3. Load the data into SQLite
 ```bash
 python load_data.py
 ```
 
-4. **Open Jupyter Notebook**
+4. Open the notebook
 ```bash
 jupyter notebook Bank_Churn_Analysis.ipynb
 ```
 
-5. **Run all cells** to see the complete analysis
+## Requirements
 
-### Requirements
 - Python 3.8+
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- jupyter
-- sqlite3 (included in Python standard library)
+- pandas, numpy, matplotlib, seaborn, jupyter
+- sqlite3 (comes with Python)
 
-## Project Highlights
+## What's Next
 
-✨ **What Makes This Project Special:**
-- **Real-world relevance**: Directly applicable to financial services industry
-- **End-to-end analysis**: From database queries to business recommendations
-- **Professional visualizations**: Publication-ready charts and insights
-- **Actionable insights**: Not just analysis, but concrete recommendations
-- **Clean code**: Well-documented, modular, reproducible
+Some ideas for extending this project:
+- Build a predictive model to identify at-risk customers before they churn
+- Add time-series analysis to see how churn patterns change over time
+- Test retention strategies with A/B testing framework
 
-## Key Insights Summary
+## About Me
 
-**Current State:**
-- 10,000 customers analyzed
-- 20.38% overall churn rate
-- 2,038 customers churned
+I'm Jamyang Ponsar, a recent Computer Science grad from Stony Brook University interested in data science and analytics.
 
-**Potential Impact:**
-If churn is reduced by just 5 percentage points:
-- ~500 additional customers retained
-- Approximately $38M in customer balances saved
-- Significant improvement in customer lifetime value
-
-## Next Steps
-
-Future enhancements could include:
-- Predictive churn model using machine learning
-- Time-series analysis of churn trends
-- Customer segmentation clustering
-- A/B testing framework for retention campaigns
-- Integration with external economic indicators
-
-## Author
-**Jamyang Ponsar**  
-Recent Computer Science Graduate | Stony Brook University  
 [LinkedIn](https://linkedin.com/in/jamyangponsar) | [GitHub](https://github.com/JamPonsar)
-
-## License
-This project is open source and available under the MIT License.
-
----
-
-## 📝 Notes
-
-**For Recruiters/Reviewers:**
-This project demonstrates:
-- SQL proficiency (complex queries, aggregations, joins)
-- Python data analysis (Pandas, NumPy)
-- Data visualization (Matplotlib, Seaborn)
-- Business acumen (translating technical findings to actionable insights)
-- Communication skills (clear documentation and presentation)
-
-See [`DEMO_SCRIPT.md`](DEMO_SCRIPT.md) for the presentation walkthrough.
