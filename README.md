@@ -41,10 +41,24 @@ I focused on making the insights actionable - not just "churn is bad" but specif
 A few interesting patterns emerged:
 
 - **Geography matters**: Germany has 2x the churn rate of France or Spain (32% vs 16%)
+
+![Churn by Geography](images/churn_by_geography.png)
+
 - **Activity is key**: Inactive members churn at nearly double the rate of active ones
+
+![Active vs Inactive Members](images/churn_by_activity.png)
+
 - **Complaints are a red flag**: Customers who complained show dramatically higher churn
+
+![Complaint Impact on Churn](images/churn_by_complaint.png)
+
 - **Age patterns**: Middle-aged customers (40-60) churn more than younger or older segments
+
+![Churn by Age Group](images/churn_by_age_group.png)
+
 - **Product paradox**: Having more products doesn't always mean more loyalty - customers with 3-4 products actually showed higher churn
+
+![Churn by Number of Products](images/churn_by_num_of_prod.png)
 
 ## Project Structure
 
