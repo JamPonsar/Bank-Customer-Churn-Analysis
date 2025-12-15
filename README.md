@@ -24,16 +24,6 @@ The analysis uses a dataset of 10,000 bank customers and combines SQL queries wi
 
 Using the [Bank Customer Churn dataset from Kaggle](https://www.kaggle.com/datasets/radheshyamkollipara/bank-customer-churn), which includes customer demographics, account details, product usage, and whether they churned.
 
-## What I Found
-
-A few interesting patterns emerged:
-
-- **Geography matters**: Germany has 2x the churn rate of France or Spain (32% vs 16%)
-- **Activity is key**: Inactive members churn at nearly double the rate of active ones
-- **Complaints are a red flag**: Customers who complained show dramatically higher churn
-- **Age patterns**: Middle-aged customers (40-60) churn more than younger or older segments
-- **Product paradox**: Having more products doesn't always mean more loyalty - customers with 3-4 products actually showed higher churn
-
 ## Analysis Approach
 
 The notebook walks through:
@@ -45,6 +35,16 @@ The notebook walks through:
 5. Business recommendations based on the data
 
 I focused on making the insights actionable - not just "churn is bad" but specifically where it's happening and what might help.
+
+## What I Found
+
+A few interesting patterns emerged:
+
+- **Geography matters**: Germany has 2x the churn rate of France or Spain (32% vs 16%)
+- **Activity is key**: Inactive members churn at nearly double the rate of active ones
+- **Complaints are a red flag**: Customers who complained show dramatically higher churn
+- **Age patterns**: Middle-aged customers (40-60) churn more than younger or older segments
+- **Product paradox**: Having more products doesn't always mean more loyalty - customers with 3-4 products actually showed higher churn
 
 ## Project Structure
 
