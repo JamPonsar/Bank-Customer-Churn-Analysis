@@ -12,7 +12,7 @@ Analysis of customer churn patterns in banking using SQL and Python to identify 
 
 I built this project to demonstrate SQL and Python data analysis skills, focusing on a real business problem in banking. Customer churn is expensive - it costs 5-7x more to acquire new customers than retain existing ones - so understanding what drives customers to leave is valuable.
 
-The analysis uses a dataset of 10,000 bank customers and combines SQL queries with Python analysis to uncover patterns in churn behavior.
+The analysis uses a synthetic dataset of 10,000 bank customers and combines SQL queries with Python analysis to uncover patterns in churn behavior.
 
 ## Tech Stack
 
